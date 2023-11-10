@@ -1,0 +1,36 @@
+<ng-container
+  *ngIf="
+  {
+    productsResponse: products$ | async,
+    stockResponse: stock$ | async,
+  } as data;"
+>
+  <div
+    class="table-responsive"
+    *ngIf="data.productsResponse && data.stockResponse; else loading"
+  >
+    <table class="table text-center">
+      <thead>
+        <tr>
+          <th scope="col" class="text-nowrap">Article Number</th>
+          <th scope="col" class="text-nowrap">Description</th>
+          <th scope="col" class="text-nowrap">Warehouse Number</th>
+          <th scope="col" class="text-nowrap">Quantity in Stock</th>
+          <th scope="col" class="text-nowrap">Available Quantity</th>
+        </tr>
+      </thead>
+      <tbody class="table-group-divider">
+        <tr
+          app-product-list-table-row
+          [product]="product"
+          [allArticlesStock]="data.stockResponse.article_stock"
+          *ngFor="let product of data.productsResponse.products"
+        ></tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>

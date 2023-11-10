@@ -1,0 +1,59 @@
+<ng-container
+  *ngIf="
+  {
+    productData: productData$ | async,
+    stockData: stockData$ | async,
+  } as data;"
+>
+  <ng-container
+    *ngIf="!data.productData?.error || !data.stockData?.error; else error"
+  >
+    <h1 class="text-center">
+      {{ data.productData?.product?.product_description }}
+      <br />
+      {{ data.productData?.product?.product_number }}
+    </h1>
+    <div class="table-responsive">
+      <table class="table text-center caption-top">
+        <caption>
+          Stock info
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col" class="text-nowrap">Warehouse</th>
+            <th scope="col" class="text-nowrap">Total Stock</th>
+            <th scope="col" class="text-nowrap">Reservation</th>
+            <th scope="col" class="text-nowrap">Available Stock</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider">
+          <tr *ngFor="let stock of data.stockData?.stock_info">
+            <td>{{ stock.warehouse_number }}</td>
+            <td>
+              {{ stock.stock_mutations | countStockByType }}
+            </td>
+            <td>
+              {{
+                stock.stock_mutations
+                  | countStockByType : mutatioTypes.RESERVATION
+              }}
+            </td>
+            <td>
+              {{
+                stock.stock_mutations | countStockByType : mutatioTypes.STOCK
+              }}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ng-container>
+</ng-container>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
+
+<ng-template #error>
+  <app-error-message></app-error-message>
+</ng-template>

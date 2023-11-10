@@ -1,0 +1,25 @@
+{
+  "generationDate": "2020-06-30T19:30:38.310Z",
+  "products": [
+    {
+      "product_number": "12345",
+      "product_description": "Dining table"
+    },
+    {
+      "product_number": "12346",
+      "product_description": "Dining chair"
+    },
+    {
+      "product_number": "12351",
+      "product_description": "Couch"
+    },
+    {
+      "product_number": "12352",
+      "product_description": "Reading chair"
+    },
+    {
+      "product_number": "12353",
+      "product_description": "Bookcase"
+    }
+  ]
+}

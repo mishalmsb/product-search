@@ -1,0 +1,17 @@
+<td>
+  <a [routerLink]="['/product', product.product_number]">
+    {{ product.product_number }}
+  </a>
+</td>
+<td>{{ product.product_description }}</td>
+<td>
+  <span *ngFor="let warehouseNumber of warehouseNumbers; let isLast = last">
+    {{ warehouseNumber }}{{ isLast ? "" : ", " }}
+  </span>
+</td>
+<td>
+  {{ quantityInStock }}
+</td>
+<td>
+  {{ availableQuantity }}
+</td>

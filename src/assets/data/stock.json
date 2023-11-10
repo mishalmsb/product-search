@@ -1,0 +1,276 @@
+{
+  "generationDate": "2020-06-30T19:30:38.310Z",
+  "article_stock": [
+    {
+      "product_number": "12345",
+      "stock_info": [
+        {
+          "warehouse_number": "W01",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "-1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "-1"
+            }
+          ]
+        },
+        {
+          "warehouse_number": "W02",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_number": "12346",
+      "stock_info": [
+        {
+          "warehouse_number": "W01",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "2"
+            },
+            {
+              "type": "stock",
+              "quantity": "5"
+            },
+            {
+              "type": "reservation",
+              "quantity": "2"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "-2"
+            },
+            {
+              "type": "reservation",
+              "quantity": "-2"
+            }
+          ]
+        },
+        {
+          "warehouse_number": "W03",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "5"
+            },
+            {
+              "type": "reservation",
+              "quantity": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_number": "12351",
+      "stock_info": [
+        {
+          "warehouse_number": "W02",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "3"
+            },
+            {
+              "type": "stock",
+              "quantity": "3"
+            },
+            {
+              "type": "stock",
+              "quantity": "3"
+            }
+          ]
+        },
+        {
+          "warehouse_number": "W03",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "3"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_number": "12352",
+      "stock_info": [
+        {
+          "warehouse_number": "W01",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "5"
+            },
+            {
+              "type": "stock",
+              "quantity": "4"
+            },
+            {
+              "type": "stock",
+              "quantity": "13"
+            },
+            {
+              "type": "reservation",
+              "quantity": "2"
+            },
+            {
+              "type": "reservation",
+              "quantity": "2"
+            },
+            {
+              "type": "stock",
+              "quantity": "-2"
+            },
+            {
+              "type": "reservation",
+              "quantity": "-2"
+            }
+          ]
+        },
+        {
+          "warehouse_number": "W02",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "-1"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "product_number": "12353",
+      "stock_info": [
+        {
+          "warehouse_number": "W01",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "-1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "-1"
+            }
+          ]
+        },
+        {
+          "warehouse_number": "W03",
+          "stock_mutations": [
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "stock",
+              "quantity": "1"
+            },
+            {
+              "type": "reservation",
+              "quantity": "1"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

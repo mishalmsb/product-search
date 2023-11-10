@@ -1,0 +1,47 @@
+<div class="table-responsive" *ngIf="data$ | async as data; else loading">
+  <table class="table text-center" *ngIf="!data.error; else error">
+    <thead>
+      <tr>
+        <th scope="col" class="text-nowrap">Article Number</th>
+        <th scope="col" class="text-nowrap">Description</th>
+        <th scope="col" class="text-nowrap">Warehouse Number</th>
+        <th scope="col" class="text-nowrap">Quantity in Stock</th>
+        <th scope="col" class="text-nowrap">Available Quantity</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let product of data.products">
+        <td>
+          <a [routerLink]="['/product', product.product_number]">
+            {{ product.product_number }}
+          </a>
+        </td>
+        <td>{{ product.product_description }}</td>
+        <td>
+          <span
+            *ngFor="
+              let warehouseNumber of product.warehouse_numbers;
+              let isLast = last
+            "
+          >
+            {{ warehouseNumber }}{{ isLast ? "" : ", " }}
+          </span>
+        </td>
+        <td>
+          {{ product.quantity_in_stock }}
+        </td>
+        <td>
+          {{ product.available_quantity }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<ng-template #loading>
+  <app-loading></app-loading>
+</ng-template>
+
+<ng-template #error>
+  <app-error-message></app-error-message>
+</ng-template>
