@@ -26,7 +26,7 @@ export class ProductDetailComponent {
   //   private _route: ActivatedRoute
   // ) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     const productNumber = this._route.snapshot.params['id'];
     this.productData$ = this._productsService.getProductByNumber(productNumber);
     this.stockData$ =

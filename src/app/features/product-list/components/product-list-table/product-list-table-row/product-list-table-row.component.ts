@@ -16,11 +16,11 @@ export class ProductListTableRowComponent {
 
   constructor(private _stockUtilityService: StockUtilityService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.setCurrentProcustStock();
   }
 
-  setCurrentProcustStock() {
+  setCurrentProcustStock(): void {
     this.currentProcustStock =
       this._stockUtilityService.getStockByProductNumber(
         this.product.product_number,

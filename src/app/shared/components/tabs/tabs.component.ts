@@ -14,7 +14,7 @@ import { TabComponent } from '../tab/tab.component';
 export class TabsComponent {
   @ContentChildren(TabComponent) tabs!: QueryList<TabComponent>;
 
-  ngAfterContentInit() {
+  ngAfterContentInit(): void {
     const activeTabs = this.tabs.filter((tab) => tab.active);
 
     if (activeTabs.length === 0) {
@@ -22,7 +22,7 @@ export class TabsComponent {
     }
   }
 
-  selectTab(tab: TabComponent) {
+  selectTab(tab: TabComponent): void {
     this.tabs.toArray().forEach((tab) => (tab.active = false));
     tab.active = true;
   }
